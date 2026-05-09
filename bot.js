@@ -1,4 +1,4 @@
-// build:1778312032066
+// build:1778369982436
 'use strict';
 var Telegraf=require('telegraf').Telegraf;
 var express=require('express');
@@ -15,7 +15,7 @@ var WEBHOOK_URL=(process.env.WEBHOOK_URL||'').trim();
 var PORT=process.env.PORT||3000;
 var TICKER='$FWC';
 var CA='TBA';
-var TWITTER='https://x.com/FWCbscGlobal';
+var TWITTER='https://x.com/fwcglobal26';
 var TG='https://t.me/FWCbscGlobal';
 var WEBSITE='';
 var IS_CTO=false;
