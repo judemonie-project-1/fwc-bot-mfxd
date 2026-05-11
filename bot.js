@@ -1,4 +1,4 @@
-// build:1778369982436
+// build:1778523219334
 'use strict';
 var Telegraf=require('telegraf').Telegraf;
 var express=require('express');
@@ -17,7 +17,7 @@ var TICKER='$FWC';
 var CA='TBA';
 var TWITTER='https://x.com/fwcglobal26';
 var TG='https://t.me/FWCbscGlobal';
-var WEBSITE='';
+var WEBSITE='https://fifa26.website';
 var IS_CTO=false;
 var RESPONSE_MODE='conversational';
 var bot=new Telegraf(BOT_TOKEN);
