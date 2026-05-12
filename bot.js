@@ -1,4 +1,4 @@
-// build:1778599812641
+// build:1778599827708
 'use strict';
 var Telegraf=require('telegraf').Telegraf;
 var express=require('express');
@@ -14,7 +14,7 @@ function nextGroqKey(){if(!_groqPool.length)return'';var k=_groqPool[_groqIdx%_g
 var WEBHOOK_URL=(process.env.WEBHOOK_URL||'').trim();
 var PORT=process.env.PORT||3000;
 var TICKER='$FWC';
-var CA='TBA';
+var CA='0xe49808a1459a8fa76094ff94eb13e6ff9fd756df';
 var TWITTER='https://x.com/fwcglobal26';
 var TG='https://t.me/FWCbscGlobal';
 var WEBSITE='https://fifa26.website';
@@ -116,8 +116,8 @@ bot.command('shoutout',async function(ctx){var admin=await isAdmin(ctx,ctx.from.
 bot.command('ca',async function(ctx){if(!caUnlocked)return ctx.reply(NOT_LIVE[Math.floor(Math.random()*NOT_LIVE.length)]);await sendWithTracker(caMsg,ctx.chat.id,'$FWC Contract Address',{});return ctx.reply('<code>'+CA+'</code>',{parse_mode:'HTML'});});
 bot.command('x',async function(ctx){return sendWithTracker(xMsg,ctx.chat.id,'Follow $FWC on X',{reply_markup:{inline_keyboard:[[{text:'Follow on X',url:TWITTER}]]}});});
 bot.command('twitter',async function(ctx){return sendWithTracker(xMsg,ctx.chat.id,'Follow $FWC on X',{reply_markup:{inline_keyboard:[[{text:'Follow on X',url:TWITTER}]]}});});
-bot.command('socials',function(ctx){return ctx.reply('<a href=\'https://dexscreener.com/bsc/TBA\'>Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=TBA\'>PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':'')+(WEBSITE?' | <a href=\''+WEBSITE+'\'>Website</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});});
-bot.command('links',function(ctx){return ctx.reply('<a href=\'https://dexscreener.com/bsc/TBA\'>Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=TBA\'>PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':'')+(WEBSITE?' | <a href=\''+WEBSITE+'\'>Website</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});});
+bot.command('socials',function(ctx){return ctx.reply('<a href=\'https://dexscreener.com/bsc/0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'>Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'>PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':'')+(WEBSITE?' | <a href=\''+WEBSITE+'\'>Website</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});});
+bot.command('links',function(ctx){return ctx.reply('<a href=\'https://dexscreener.com/bsc/0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'>Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'>PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':'')+(WEBSITE?' | <a href=\''+WEBSITE+'\'>Website</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});});
 bot.command('info',function(ctx){return ctx.reply('<b>$FWC</b> \u2014 BNB Smart Chain (BSC)\n\nSupply: 2,026,000,000\nMax Wallet: 5%\nTax: 5% buy / 5% sell\nContract: RENOUNCED\nLP: PENDING'+(TWITTER?'\nTwitter: '+TWITTER:''),{parse_mode:'HTML',disable_web_page_preview:true});});
 bot.command('shill',async function(ctx){
   var shillMsgs=[
@@ -176,7 +176,7 @@ bot.on('message',async function(ctx){
       await sendWithTracker(caMsg,ctx.chat.id,'$FWC Contract Address',{});return ctx.reply('<code>'+CA+'</code>',{parse_mode:'HTML'});
     }
     if(lower==='x'||lower==='twitter')return sendWithTracker(xMsg,ctx.chat.id,'Follow $FWC on X',{reply_markup:{inline_keyboard:[[{text:'Follow on X',url:TWITTER}]]}});
-    if(lower==='socials'||lower==='links')return ctx.reply('<a href=\'https://dexscreener.com/bsc/TBA\'> Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=TBA\'> PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});
+    if(lower==='socials'||lower==='links')return ctx.reply('<a href=\'https://dexscreener.com/bsc/0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'> Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'> PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});
     return;
   }
   if(!text)return;
@@ -192,7 +192,7 @@ bot.on('message',async function(ctx){
     await sendWithTracker(caMsg,ctx.chat.id,'$FWC Contract Address',{});return ctx.reply('<code>'+CA+'</code>',{parse_mode:'HTML'});
   }
   if(lower2==='x'||lower2==='twitter'||lower2.includes('follow on'))return sendWithTracker(xMsg,ctx.chat.id,'Follow $FWC on X',{reply_markup:{inline_keyboard:[[{text:'Follow on X',url:TWITTER}]]}});
-  if(lower2==='socials'||lower2==='links')return ctx.reply('<a href=\'https://dexscreener.com/bsc/TBA\'> Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=TBA\'> PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});
+  if(lower2==='socials'||lower2==='links')return ctx.reply('<a href=\'https://dexscreener.com/bsc/0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'> Chart</a> | <a href=\'https://pancakeswap.finance/swap?outputCurrency=0xe49808a1459a8fa76094ff94eb13e6ff9fd756df\'> PancakeSwap</a>'+(TWITTER?' | <a href=\''+TWITTER+'\'>Twitter</a>':''),{parse_mode:'HTML',disable_web_page_preview:true});
   if(isPrivate){try{var gr=await smartAsk(chatHistory.join('\n'));if(gr&&gr!=='IGNORE')return ctx.reply(gr);}catch(_){}return;}
   if(RESPONSE_MODE==='focused'){if(text.indexOf('?')===-1)return;try{var gr2=await smartAsk(chatHistory.join('\n'));if(gr2&&gr2!=='IGNORE')return ctx.reply(gr2);}catch(_){}return;}
   var tkLow=TICKER.toLowerCase().replace('$','');
